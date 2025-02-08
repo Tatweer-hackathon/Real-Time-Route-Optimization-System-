@@ -67,7 +67,7 @@ The prototype is not intended to replace existing ERP systems but to act as a de
 - **Improve Efficiency:** Shorten delivery times and enhance overall operational performance.
 - **Enhance Responsiveness:** Quickly react to dynamic conditions (e.g., traffic congestion or road incidents) with threshold-based re-optimization.
 
-This proof-of-concept validates the potential of using technologies like Kafka, real-time databases, and threshold-based optimization to enhance logistics operations and lays the foundation for further development in a production environment.
+This proof-of-concept validates the potential of using technologies like Kafka, and threshold-based optimization to enhance logistics operations and lays the foundation for further development in a production environment.
 
 
 resources : https://medium.com/@mervegamzenar/optimizing-delivery-routes-historical-and-real-time-data-f365d6b717be https://github.com/aurelio-labs/semantic-router/blob/main/docs/06-threshold-optimization.ipynb , https://www.meshiq.com/how-kafka-supports-fleet-management-route-optimization/ , https://kardinal.ai/whats-wrong-with-route-optimization/ , https://dev.to/renukapatil/mastering-apache-kafka-a-complete-guide-to-the-heart-of-real-time-data-streaming-3456 https://yellow.systems/blog/real-time-route-optimization-with-ai , https://www.leadspace.com/blog/10-ways-youre-losing-with-static-data/ https://www.upperinc.com/blog/data-driven-route-optimization/
