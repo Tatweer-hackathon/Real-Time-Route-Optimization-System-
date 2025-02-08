@@ -39,19 +39,26 @@ This project demonstrates a dynamic route optimization system for logistics that
    - The API server provides endpoints for retrieving the current optimized route.
 
 
-## Deployment & Usage
+## Real-World Example
 
-- **Deployment:**  
-  - **Kafka:** Can be hosted on Confluent Cloud or a similar service.
-  - **Database:** Use a cloud-hosted solution (e.g., MongoDB Atlas, InfluxDB).
-  - **API Server:** Deploy on platforms such as Heroku, AWS Elastic Beanstalk, or via Docker/Kubernetes.
-  - **Online Viewer:** Deploy the React app on Vercel or Netlify (or Streamlit on Streamlit Cloud).
+### Static Routing Example
 
-- **Usage:**  
-  - Follow the installation instructions to set up the environment.
-  - Run the backend components and ensure the real-time data pipeline is active.
-  - Launch the online viewer to see the dynamic, real-time route optimization in action.
+- **Scenario:**  
+  At 10:00 AM, a truck is assigned a route based on historical data. The system computes a route using static conditions:
+  - **Planned Route:** Truck is set to take Highway 101.
+  - **Assumptions:** Traffic is expected to be light (based on historical averages).
+  - **Outcome:** The truck follows the planned route. However, at 10:05 AM, an unexpected accident occurs on Highway 101, causing heavy congestion.  
+  - **Result:** The truck gets stuck in traffic because the static system did not adapt to the change, resulting in delays and increased costs.
 
+### Dynamic Routing Example
+
+- **Scenario:**  
+  The same truck is initially assigned a route at 10:00 AM. The dynamic system, however, continuously monitors traffic data.
+  - **Initial Route:** Similar to the static example, the truck is set to take Highway 101.
+  - **Real-Time Update:** At 10:05 AM, Kafka streams an update showing heavy congestion on Highway 101.  
+  - **Threshold Check:** The optimization engine calculates an alternative route that saves 15 minutes compared to the current route. Since this improvement exceeds the threshold (e.g., 10 minutes saved), the system updates the route.
+  - **Outcome:** The truck is rerouted to take an alternative path (e.g., Highway 105), avoiding the congestion and arriving on time.
+  - **Result:** The dynamic system successfully adapts to real-time conditions, reducing delays and fuel costs.
 ## Purpose
 
 The prototype is not intended to replace existing ERP systems but to act as a decision-support tool. It demonstrates how real-time data can be used to adapt routes dynamically, helping managers:
