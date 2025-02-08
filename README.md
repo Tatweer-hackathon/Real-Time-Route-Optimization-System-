@@ -23,8 +23,6 @@ This project demonstrates a dynamic route optimization system for logistics that
 - **API Server:**  
   A REST API (built with FastAPI or a similar framework) exposes the latest optimized route and key metrics. This allows for easy integration with front-end applications.
 
-- **Online Viewer / Dashboard:**  
-  An interactive front end (built with React using react-leaflet, or alternatively with Streamlit for rapid prototyping) displays the optimized route on a map with clear directional arrows and step-by-step markers. It periodically polls the API to show real-time updates.
 
 ## System Workflow
 
@@ -40,8 +38,6 @@ This project demonstrates a dynamic route optimization system for logistics that
 4. **API Serving:**  
    - The API server provides endpoints for retrieving the current optimized route.
 
-5. **Visualization:**  
-   - The online viewer fetches the route data from the API and displays it on an interactive map, updating in real time.
 
 ## Deployment & Usage
 
